@@ -1,0 +1,288 @@
+{
+  "resourceSpans": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "agent-api"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "synthetic-model-fixture",
+            "version": "1.0"
+          },
+          "spans": [
+            {
+              "traceId": "11111111111111111111111111111111",
+              "spanId": "0000000000000001",
+              "name": "chat demo-small",
+              "startTimeUnixNano": "1720000000000000001",
+              "endTimeUnixNano": "1720000000000000026",
+              "attributes": [
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "requested-alias"
+                  }
+                },
+                {
+                  "key": "gen_ai.response.model",
+                  "value": {
+                    "stringValue": "demo-small"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "1000"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "200"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "11111111111111111111111111111111",
+              "spanId": "0000000000000005",
+              "name": "chat incomplete",
+              "startTimeUnixNano": "1720000000000000016",
+              "endTimeUnixNano": "1720000000000000019",
+              "attributes": [
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "demo-small"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "500"
+                  }
+                }
+              ],
+              "parentSpanId": "0000000000000001"
+            },
+            {
+              "traceId": "22222222222222222222222222222222",
+              "spanId": "0000000000000001",
+              "name": "chat zero usage",
+              "startTimeUnixNano": "1720000000000000031",
+              "endTimeUnixNano": "1720000000000000032",
+              "attributes": [
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "requested-alias"
+                  }
+                },
+                {
+                  "key": "gen_ai.response.model",
+                  "value": {
+                    "stringValue": "demo-small"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "0"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "0"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "tool-worker"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "synthetic-tool-fixture"
+          },
+          "spans": [
+            {
+              "traceId": "11111111111111111111111111111111",
+              "spanId": "0000000000000002",
+              "name": "execute_tool search",
+              "startTimeUnixNano": "1720000000000000006",
+              "endTimeUnixNano": "1720000000000000012",
+              "attributes": [
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "execute_tool"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "search"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.call.arguments",
+                  "value": {
+                    "kvlistValue": {
+                      "values": [
+                        {
+                          "key": "query",
+                          "value": {
+                            "stringValue": "retry"
+                          }
+                        },
+                        {
+                          "key": "filters",
+                          "value": {
+                            "arrayValue": {
+                              "values": [
+                                {
+                                  "stringValue": "docs"
+                                },
+                                {
+                                  "stringValue": "issues"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "parentSpanId": "0000000000000001"
+            },
+            {
+              "traceId": "11111111111111111111111111111111",
+              "spanId": "0000000000000003",
+              "name": "execute_tool search",
+              "startTimeUnixNano": "1720000000000000008",
+              "endTimeUnixNano": "1720000000000000014",
+              "attributes": [
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "execute_tool"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "search"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.call.arguments",
+                  "value": {
+                    "kvlistValue": {
+                      "values": [
+                        {
+                          "key": "query",
+                          "value": {
+                            "stringValue": "retry"
+                          }
+                        },
+                        {
+                          "key": "filters",
+                          "value": {
+                            "arrayValue": {
+                              "values": [
+                                {
+                                  "stringValue": "docs"
+                                },
+                                {
+                                  "stringValue": "issues"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "parentSpanId": "0000000000000001"
+            },
+            {
+              "traceId": "11111111111111111111111111111111",
+              "spanId": "0000000000000004",
+              "name": "execute_tool search",
+              "startTimeUnixNano": "1720000000000000015",
+              "endTimeUnixNano": "1720000000000000015",
+              "attributes": [
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "execute_tool"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "search"
+                  }
+                }
+              ],
+              "parentSpanId": "0000000000000001"
+            },
+            {
+              "traceId": "11111111111111111111111111111111",
+              "spanId": "0000000000000006",
+              "name": "sampled child",
+              "startTimeUnixNano": "1720000000000000021",
+              "endTimeUnixNano": "1720000000000000022",
+              "attributes": [],
+              "parentSpanId": "0000000000000063"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

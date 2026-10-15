@@ -1,9 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-label="Agent Trace Ledger">
-<defs><linearGradient id="g"><stop stop-color="#0b1020"/><stop offset="1" stop-color="hsl(101,45%,20%)"/></linearGradient></defs>
-<rect width="1200" height="280" rx="20" fill="url(#g)"/>
-<circle cx="1100" cy="70" r="130" fill="none" stroke="hsl(101,75%,65%)" stroke-width="2" opacity=".4"/>
-<circle cx="1100" cy="70" r="90" fill="none" stroke="hsl(101,75%,65%)" stroke-width="2" opacity=".3"/>
-<text x="60" y="65" fill="hsl(101,85%,75%)" font-family="monospace" font-size="18" letter-spacing="4">XINGCEO / OPEN ENGINEERING</text>
-<text x="60" y="145" fill="#fff" font-family="system-ui,sans-serif" font-size="54" font-weight="700">Agent Trace Ledger</text>
-<text x="60" y="205" fill="#cbd5e1" font-family="system-ui,sans-serif" font-size="21">Find retry loops, orphan spans and hidden token costs in offline agent traces.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Agent Trace Ledger: offline OTLP audits, exact timing, explicit cost coverage">
+  <defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#081425"/><stop offset="1" stop-color="#123b41"/></linearGradient></defs>
+  <rect width="1200" height="320" rx="22" fill="url(#g)"/>
+  <path d="M800 0V320M900 0V320M1000 0V320M1100 0V320" stroke="#8cdbcf" opacity=".08"/>
+  <g font-family="system-ui,sans-serif">
+    <text x="56" y="53" fill="#7ce8cd" font-size="14" letter-spacing="3">XINGCEO / OPEN ENGINEERING</text>
+    <text x="56" y="124" fill="#fff" font-size="50" font-weight="700">Agent Trace Ledger</text>
+    <text x="59" y="168" fill="#c5d7e5" font-size="22">Explain the calls. Expose the missing costs.</text>
+    <g font-family="monospace" font-size="13" fill="#b8f4e8">
+      <rect x="58" y="210" width="112" height="32" rx="16" fill="#18483f"/><text x="77" y="231">OTLP JSON</text>
+      <rect x="182" y="210" width="136" height="32" rx="16" fill="#18483f"/><text x="201" y="231">INTEGER NS</text>
+      <rect x="330" y="210" width="158" height="32" rx="16" fill="#18483f"/><text x="350" y="231">COST COVERAGE</text>
+      <rect x="500" y="210" width="112" height="32" rx="16" fill="#18483f"/><text x="519" y="231">OFFLINE</text>
+    </g>
+    <text x="59" y="287" fill="#82a7b4" font-size="13">Python 3.11+ / no runtime dependencies / local JSON in, audit report out</text>
+    <g transform="translate(810 72)">
+      <text x="0" y="0" fill="#9fbbc7" font-size="12" letter-spacing="2">ONE TRACE, VISIBLE GAPS</text>
+      <rect y="27" width="300" height="20" rx="5" fill="#36cfa4"/>
+      <path d="M18 47V162M18 82H50M18 123H85M18 162H182" stroke="#43877c" fill="none"/>
+      <rect x="50" y="69" width="118" height="23" rx="4" fill="#7ce8cd"/>
+      <rect x="85" y="110" width="120" height="23" rx="4" fill="#7ce8cd"/>
+      <rect x="182" y="150" width="89" height="23" rx="4" fill="none" stroke="#ffc078" stroke-width="2" stroke-dasharray="5 4"/>
+      <text x="52" y="86" fill="#08251f" font-size="12">search</text><text x="89" y="127" fill="#08251f" font-size="12">search</text>
+      <text x="183" y="198" fill="#ffc078" font-size="12">usage missing</text>
+    </g>
+  </g>
 </svg>

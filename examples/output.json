@@ -1,19 +1,87 @@
 {
-  "estimated_cost": "0.00036",
-  "graph_findings": [],
-  "repeated_calls": [
+  "cost": {
+    "complete": true,
+    "currency": "USD",
+    "fully_priced_span_count": 1,
+    "incomplete_span_count": 0,
+    "incomplete_spans": [],
+    "known_subtotal": "0.00036",
+    "model_span_count": 1,
+    "truncated": false
+  },
+  "coverage": {
+    "tool_spans_without_arguments": 0,
+    "unclassified_span_count": 0
+  },
+  "graph": {
+    "count": 0,
+    "findings": [],
+    "truncated": false
+  },
+  "input_format": "normalized",
+  "limits": {
+    "max_findings_per_category": 100,
+    "max_spans": 10000
+  },
+  "repeated_calls": {
+    "group_count": 1,
+    "groups": [
+      {
+        "arguments": {
+          "q": "retry"
+        },
+        "call_count": 2,
+        "overlap_examples": [],
+        "overlap_examples_truncated": false,
+        "overlap_pair_count": 0,
+        "spans": [
+          "local/b",
+          "local/c"
+        ],
+        "spans_truncated": false,
+        "tool": "search",
+        "trace_id": "local"
+      }
+    ],
+    "truncated": false
+  },
+  "schema_version": "0.2",
+  "span_count": 3,
+  "timelines": [
     {
-      "arguments": {
-        "q": "retry"
-      },
-      "overlaps": [],
+      "duration_ns": "20000000",
+      "origin_ns": "0",
       "spans": [
-        "b",
-        "c"
+        {
+          "duration_ns": "10000000",
+          "kind": "llm",
+          "name": "small",
+          "scope": null,
+          "service": null,
+          "span": "local/a",
+          "start_offset_ns": "0"
+        },
+        {
+          "duration_ns": "4000000",
+          "kind": "tool",
+          "name": "search",
+          "scope": null,
+          "service": null,
+          "span": "local/b",
+          "start_offset_ns": "11000000"
+        },
+        {
+          "duration_ns": "4000000",
+          "kind": "tool",
+          "name": "search",
+          "scope": null,
+          "service": null,
+          "span": "local/c",
+          "start_offset_ns": "16000000"
+        }
       ],
-      "tool": "search"
+      "trace_id": "local"
     }
   ],
-  "span_count": 3,
-  "unpriced_spans": []
+  "trace_count": 1
 }

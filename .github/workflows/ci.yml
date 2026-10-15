@@ -13,6 +13,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
-      - run: python -m pip install .
+      - run: python -m pip install ".[interop]"
       - run: python -m unittest discover -v
-      - run: agent-trace-ledger examples/input.json
+      - run: python scripts/check_otlp_schema.py
+      - run: agent-trace-ledger examples/otlp.json --rates examples/rates.json
+      - run: agent-trace-ledger examples/input.json --fail-on graph
+      - name: Verify installed entry point outside checkout
+        working-directory: ${{ runner.temp }}
+        run: agent-trace-ledger --version

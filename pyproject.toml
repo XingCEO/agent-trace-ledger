@@ -4,13 +4,16 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "agent-trace-ledger"
-version = "0.1.0"
-description = "Find retry loops, orphan spans and hidden token costs in offline agent traces."
+version = "0.2.0"
+description = "Audit offline OTLP/JSON agent traces with exact timing and explicit token cost coverage."
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
 authors = [{name = "XingCEO"}]
 classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License"]
+
+[project.optional-dependencies]
+interop = ["opentelemetry-proto>=1.30,<2"]
 
 [project.scripts]
 agent-trace-ledger = "agent_trace_ledger:main"

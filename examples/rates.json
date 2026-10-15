@@ -1,0 +1,9 @@
+{
+  "currency": "USD",
+  "models": {
+    "demo-small": {
+      "input": "0.20",
+      "output": "0.80"
+    }
+  }
+}

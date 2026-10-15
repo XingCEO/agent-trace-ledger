@@ -1,0 +1,152 @@
+{
+  "cost": {
+    "complete": false,
+    "currency": "USD",
+    "fully_priced_span_count": 2,
+    "incomplete_span_count": 1,
+    "incomplete_spans": [
+      {
+        "reasons": [
+          "missing_output_tokens"
+        ],
+        "span": "11111111111111111111111111111111/0000000000000005"
+      }
+    ],
+    "known_subtotal": "0.00046",
+    "model_span_count": 3,
+    "truncated": false
+  },
+  "coverage": {
+    "tool_spans_without_arguments": 1,
+    "unclassified_span_count": 1
+  },
+  "graph": {
+    "count": 1,
+    "findings": [
+      {
+        "kind": "missing_parent",
+        "parent": "11111111111111111111111111111111/0000000000000063",
+        "span": "11111111111111111111111111111111/0000000000000006"
+      }
+    ],
+    "truncated": false
+  },
+  "input_format": "otlp",
+  "limits": {
+    "max_findings_per_category": 100,
+    "max_spans": 10000
+  },
+  "repeated_calls": {
+    "group_count": 1,
+    "groups": [
+      {
+        "arguments": {
+          "filters": [
+            "docs",
+            "issues"
+          ],
+          "query": "retry"
+        },
+        "call_count": 2,
+        "overlap_examples": [
+          [
+            "11111111111111111111111111111111/0000000000000002",
+            "11111111111111111111111111111111/0000000000000003"
+          ]
+        ],
+        "overlap_examples_truncated": false,
+        "overlap_pair_count": 1,
+        "spans": [
+          "11111111111111111111111111111111/0000000000000002",
+          "11111111111111111111111111111111/0000000000000003"
+        ],
+        "spans_truncated": false,
+        "tool": "search",
+        "trace_id": "11111111111111111111111111111111"
+      }
+    ],
+    "truncated": false
+  },
+  "schema_version": "0.2",
+  "span_count": 7,
+  "timelines": [
+    {
+      "duration_ns": "25",
+      "origin_ns": "1720000000000000001",
+      "spans": [
+        {
+          "duration_ns": "25",
+          "kind": "llm",
+          "name": "chat demo-small",
+          "scope": "synthetic-model-fixture",
+          "service": "agent-api",
+          "span": "11111111111111111111111111111111/0000000000000001",
+          "start_offset_ns": "0"
+        },
+        {
+          "duration_ns": "6",
+          "kind": "tool",
+          "name": "search",
+          "scope": "synthetic-tool-fixture",
+          "service": "tool-worker",
+          "span": "11111111111111111111111111111111/0000000000000002",
+          "start_offset_ns": "5"
+        },
+        {
+          "duration_ns": "6",
+          "kind": "tool",
+          "name": "search",
+          "scope": "synthetic-tool-fixture",
+          "service": "tool-worker",
+          "span": "11111111111111111111111111111111/0000000000000003",
+          "start_offset_ns": "7"
+        },
+        {
+          "duration_ns": "0",
+          "kind": "tool",
+          "name": "search",
+          "scope": "synthetic-tool-fixture",
+          "service": "tool-worker",
+          "span": "11111111111111111111111111111111/0000000000000004",
+          "start_offset_ns": "14"
+        },
+        {
+          "duration_ns": "3",
+          "kind": "llm",
+          "name": "chat incomplete",
+          "scope": "synthetic-model-fixture",
+          "service": "agent-api",
+          "span": "11111111111111111111111111111111/0000000000000005",
+          "start_offset_ns": "15"
+        },
+        {
+          "duration_ns": "1",
+          "kind": "other",
+          "name": "sampled child",
+          "scope": "synthetic-tool-fixture",
+          "service": "tool-worker",
+          "span": "11111111111111111111111111111111/0000000000000006",
+          "start_offset_ns": "20"
+        }
+      ],
+      "trace_id": "11111111111111111111111111111111"
+    },
+    {
+      "duration_ns": "1",
+      "origin_ns": "1720000000000000031",
+      "spans": [
+        {
+          "duration_ns": "1",
+          "kind": "llm",
+          "name": "chat zero usage",
+          "scope": "synthetic-model-fixture",
+          "service": "agent-api",
+          "span": "22222222222222222222222222222222/0000000000000001",
+          "start_offset_ns": "0"
+        }
+      ],
+      "trace_id": "22222222222222222222222222222222"
+    }
+  ],
+  "trace_count": 2
+}
