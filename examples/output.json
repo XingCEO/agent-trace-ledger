@@ -1,0 +1,19 @@
+{
+  "estimated_cost": "0.00036",
+  "graph_findings": [],
+  "repeated_calls": [
+    {
+      "arguments": {
+        "q": "retry"
+      },
+      "overlaps": [],
+      "spans": [
+        "b",
+        "c"
+      ],
+      "tool": "search"
+    }
+  ],
+  "span_count": 3,
+  "unpriced_spans": []
+}
